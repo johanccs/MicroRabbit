@@ -31,7 +31,7 @@ namespace MicroRabbit.Infra.Bus
             return _mediator.Send(command);
         }
 
-        public void Publish<T>(T @event) where T : IEventBus
+        public void Publish<T>(T @event) where T : Event
         {
             var factory = new ConnectionFactory
             {
